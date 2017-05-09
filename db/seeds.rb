@@ -3,9 +3,8 @@ require 'faker'
 puts 'Cleaning database...'
 Ingredient.destroy_all
 
-puts 'Creating ingredients'
-10.times do
-  Ingredient.create!(name: Faker::Food.ingredient)
-end
+ingredients = %w(lemon ice mint leaves redbull jagermeister sugar tonic gin rhum)
+ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
 
-puts '#{Ingredient.count} ingredients creating..'
+
+puts 'Ingredients creating..'

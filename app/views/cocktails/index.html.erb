@@ -1,12 +1,22 @@
-<h2>Cocktails</h2>
+<h2 class="text-center">Cocktails</h2>
 
-<% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
-  <%= link_to 'View', cocktail_path(cocktail) %> |
-  <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
-  <%= link_to 'Delete', cocktail_path(cocktail),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card text-center">
+          <div class="card-header", style="background-image: url('https://static.pexels.com/photos/160150/pexels-photo-160150.jpeg');">
+          </div>
+          <div class="card-body">
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to 'Add a new cocktail', new_cocktail_path(@cocktail) %>
+<div class="text-center padded">
+  <%= link_to 'Create a cocktail', new_cocktail_path(@cocktail), class: "btn btn-default" %>
+</div>
+

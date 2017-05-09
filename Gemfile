@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use postgresql as the database for Active Record
@@ -29,7 +29,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-ruby '2.3.3'
+gem 'jquery-rails'
+gem "bootstrap-sass"
+gem "font-awesome-sass"
+gem "simple_form"
+gem "autoprefixer-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -37,6 +41,8 @@ ruby '2.3.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do

@@ -34,6 +34,7 @@ gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "simple_form", github: 'elsurudo/simple_form', branch: 'rails-5.1.0'
 gem "autoprefixer-rails"
+gem 'faker', '~> 1.7', '>= 1.7.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

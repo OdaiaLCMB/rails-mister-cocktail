@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem "bootstrap-sass"
 gem "font-awesome-sass"
-gem "simple_form"
+gem "simple_form", github: 'elsurudo/simple_form', branch: 'rails-5.1.0'
 gem "autoprefixer-rails"
 
 # Use Capistrano for deployment

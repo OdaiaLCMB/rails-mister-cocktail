@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <h2>New cocktail</h2>
+      <h2><%= @cocktail.name %></h2>
 
       <%= simple_form_for(@cocktail) do |f| %>
         <p>
@@ -24,6 +24,3 @@
 <div class="text-center padded">
   <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
 </div>
-
-
-

@@ -1,0 +1,16 @@
+.card {
+  height: 175px;
+  color: white;
+  position: relative;
+}
+
+.card-header {
+  background-size: cover;
+}
+
+.card-body {
+  .card-body:hover {
+    opacity: 0.1;
+    text-decoration: none;
+  }
+}

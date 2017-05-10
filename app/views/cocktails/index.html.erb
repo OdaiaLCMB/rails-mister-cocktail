@@ -11,7 +11,13 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path cocktail.photo %>')">
+
+        <% if cocktail.photo %>
+          <div class="card " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path cocktail.photo %>')">
+        <% else %>
+          <div class="card " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dkt6x6yfo/image/upload/v1494412145/grxpi2d0eyfpsgr8ujtf.jpg')">
+        <% end %>
+
           <div class="card-description">
             <p>
               <%= link_to cocktail.name, cocktail_path(cocktail) %>

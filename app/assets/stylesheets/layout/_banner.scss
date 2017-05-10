@@ -1,0 +1,36 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 60vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  color: rgba(211, 12, 95, 0.9);
+}
+.banner p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+.btn-banner {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: rgb(211, 12, 95);
+  transition: background 0.3s ease;
+  .btn-banner:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+  }
+}

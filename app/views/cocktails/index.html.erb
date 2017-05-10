@@ -1,22 +1,25 @@
-<h2 class="text-center">Cocktails</h2>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="text-center padded">
-        <ul class="list-unstyled">
-          <% @cocktails.each do |cocktail| %>
-            <li>
-              <%= link_to cocktail.name, cocktail_path(cocktail) %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dkt6x6yfo/image/upload/v1494423909/xackpaeed1foogjvz15u.jpg')">
+  <div class= "banner-content">
+    <h1>Cocktails</h1>
+    <p>
+      <%= link_to 'Add a new cocktail', new_cocktail_path(@cocktail), class: "btn btn-banner" %>
+    </p>
   </div>
 </div>
 
-<div class="text-center padded">
-  <%= link_to 'Create a cocktail', new_cocktail_path(@cocktail), class: "btn btn-default" %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path cocktail.photo %>')">
+          <div class="card-description">
+            <p>
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </p>
+          </div>
+        </div>
+      </div>
+     <% end %>
+  </div>
 </div>
 
